@@ -1,0 +1,4 @@
+安装
+npm i -g webpack
+npm i -D webpack-dev-server
+npm install vue-resource --save
