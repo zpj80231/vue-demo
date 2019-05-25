@@ -13,7 +13,7 @@
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/newslist">
                     <img src="../../images/menu1.png" alt="">
                     <div class="mui-media-body">新闻资讯</div></router-link></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/photoslist">
                     <img src="../../images/menu2.png" alt="">
                     <div class="mui-media-body">图片分享</div></router-link></li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">

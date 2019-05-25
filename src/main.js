@@ -29,11 +29,15 @@ Vue.http.options.emulateJSON = true;
 
 
 // 按需导入 Mint-UI 中的组件
-import {Header, Swipe, SwipeItem, Button} from 'mint-ui'
+/*import {Header, Swipe, SwipeItem, Button, Lazyload } from 'mint-ui'
 Vue.component(Header.name, Header)//显示顶部区域
 Vue.component(Swipe.name, Swipe);//展示首页轮播图组件
 Vue.component(SwipeItem.name, SwipeItem);//展示首页轮播图组件
 Vue.component(Button.name, Button);//展示按钮
+Vue.use(Lazyload);// 图片区域的懒加载*/
+import MuitUI from "mint-ui"
+Vue.use(MuitUI)
+import 'mint-ui/lib/style.css'
 
 // 导入 MUI 的样式
 import './lib/mui/css/mui.min.css'
