@@ -1,12 +1,12 @@
 <template>
     <div>
          <!-- 轮播图区域 -->
-        <mt-swipe :auto="4000">
-          <!-- 在组件中，使用v-for循环的话，一定要使用 key -->
-          <mt-swipe-item v-for="item in lunbotuList" :key="item.img">
-            <img :src="item.img" alt="">
-          </mt-swipe-item>
-        </mt-swipe>
+        <!--
+            多个地方用到了轮播图，把轮播图单独抽取为一个组件
+            :lunbotuList : 每个要遍历的轮播图数组
+            :isfull      : 要遍历的轮播图宽度是否为100%(商品列表详情的轮播图宽为100%就不好看了)
+        -->
+        <lunbotu :lunbotuList="lunbotuList" :isfull="true"></lunbotu>
 
         <!-- 六宫格 -->
          <ul class="mui-table-view mui-grid-view mui-grid-9">
@@ -36,6 +36,7 @@
 
 <script>
 import { Toast } from 'mint-ui';
+import lunbotu from '../subcomponents/swiper.vue'
 
 export default {
     data(){
@@ -59,32 +60,15 @@ export default {
                 }
               });
         }
+    },
+    components: {
+        lunbotu
     }
 }
 
 </script>
 
 <style lang="scss" scoped>
-.mint-swipe {
-    height: 200px;
-
-    .mint-swipe-item {
-        &:nth-child(1){
-            background-color: red;
-        }
-        &:nth-child(2){
-            background-color: yellow;
-        }
-        &:nth-child(3){
-            background-color: blue;
-        }
-
-        img {
-            height: 100%;
-            width: 100%;
-        }
-    }
-}
 
 .mui-grid-view.mui-grid-9 {
     background-color: #fff;

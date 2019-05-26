@@ -34,6 +34,7 @@
 </script>
 
 <style lang="scss" scoped>
+
     .app-container {
         /*
             让各组件显示在 顶部区域 和 底部区域 之间
@@ -42,6 +43,7 @@
         padding-top: 40px;
         padding-bottom: 50px;
         overflow-x: hidden;
+        background-color: #fff;
     }
 
     .mint-header.is-fixed {
