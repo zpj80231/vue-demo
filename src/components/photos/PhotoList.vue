@@ -18,16 +18,18 @@
             </div>
         </div>
 
-        <!-- 图片列表区域 -->
+        <!-- 图片列表区域 Mint-UI 提供的现成的组件 `lazy-load`-->
         <ul class="photo-list">
-            <li v-for="item in list" :key="item.id">
+            <!-- 点击图片区域(包含点击摘要区域)跳转到图片详情 -->
+            <router-link v-for="item in list" :key="item.id"
+                         :to="'/home/photoinfo/' + item.id" tag="li">
                 <img v-lazy="item.img_url">
                 <!-- 图片显示摘要区域 -->
                 <div class="info">
                     <h1 class="info-title">{{item.title}}</h1>
                     <div class="info-body">{{item.zhaiyao}}</div>
                 </div>
-            </li>
+            </router-link>
         </ul>
 
     </div>
@@ -59,7 +61,7 @@
             // 默认进入页面显示全部分类图片列表
             this.getPhotoListByCateId(0);
         },
-        mounted(){//dom结构被渲染好并放到页面中的时候会执行，
+        mounted() {//dom结构被渲染好并放到页面中的时候会执行，
 
             //只有当dom被渲染好并挂到页面之后，才会拿到 .mui-scroll-wrapper，滑动才有效
             //解决了这个问题，但是还会有底部区域的tabal不能点的问题，原因是js类名和tabal类名冲突了

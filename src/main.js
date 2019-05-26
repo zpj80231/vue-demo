@@ -4,6 +4,11 @@ import Vue from "vue"
 import app from "./App.vue"
 
 
+// 注册 vuex
+import Vuex from 'vuex'
+Vue.use(Vuex)
+
+
 // 导入格式化插件
 import moment from "moment"
 // 定义Vue全局过滤器 (时间转换过滤器)
@@ -25,6 +30,11 @@ Vue.use(VueResource)
 Vue.http.options.root = 'http://www.liulongbin.top:3005/';
 // 全局设置 post 时候表单数据格式组织形式(省得每次手写了)   application/x-www-form-urlencoded
 Vue.http.options.emulateJSON = true;
+
+
+// 安装 图片预览插件
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
 
 
 

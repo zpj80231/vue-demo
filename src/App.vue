@@ -36,7 +36,7 @@
 <style lang="scss" scoped>
     .app-container {
         /*
-            让组件显示在 顶部区域 和 底部区域 之间
+            让各组件显示在 顶部区域 和 底部区域 之间
             overflow-x: hidden 防止顶部和底部区域跟着动画移动
         */
         padding-top: 40px;
@@ -64,7 +64,7 @@
         transition: all 0.5s ease;
     }
 
-    //该类名解决tabbar无法切换的问题 把所有.mui-tab-item 改为 .mui-tab-item-随便写
+    //该类名解决显示图片列表分类的坑： 底部 tabbar无法切换的问题 把所有.mui-tab-item 改为 .mui-tab-item-随便写
     .mui-bar-tab .mui-tab-item-zpj.mui-active {
         color: #007aff;
     }
