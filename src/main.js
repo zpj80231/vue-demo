@@ -38,6 +38,7 @@ Vue.use(VuePreview)
 
 
 
+
 // 按需导入 Mint-UI 中的组件
 /*import {Header, Swipe, SwipeItem, Button, Lazyload } from 'mint-ui'
 Vue.component(Header.name, Header)//显示顶部区域

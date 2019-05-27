@@ -16,15 +16,9 @@
             $preview.open
         -->
         <div class="suoluetu">
-            <span>这是缩略图插件旧版本:</span><br>
-            <img class="preview-img" v-for="(item,i) in list" :key="item.src"
-                 :src="item.src" alt=""
-                 @click="$preview.open(index, list)">
-
-            <!-- 最新版插件和之前不一样，看这里
+            <!-- 最新缩略图版插件和之前不一样，看这里
              https://blog.csdn.net/qq_36742720/article/details/83270636
              -->
-            <br><span>这是缩略图插件新版本:</span>
             <vue-preview :slides="list"></vue-preview>
         </div>
 

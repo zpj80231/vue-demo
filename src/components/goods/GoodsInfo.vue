@@ -102,5 +102,16 @@
 </script>
 
 <style lang="scss" scoped>
+    .goos-info {
+        //background-color: #eee;
+        overflow: hidden;
 
+        .now_price {
+            color: red;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+
+    }
 </style>

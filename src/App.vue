@@ -1,7 +1,11 @@
 <template>
     <div class="app-container">
         <!-- 顶部区域 -->
-        <mt-header fixed title="Demo"></mt-header>
+        <mt-header fixed title="Vue-Demo">
+            <router-link v-show="isBack" to slot="left">
+                <mt-button icon="back" @click="prevWeb">返回</mt-button>
+            </router-link>
+        </mt-header>
         <!-- 中间的 路由 router-view 区域 -->
         <transition><!-- 包裹动画 -->
             <router-view></router-view><!-- 这是放置路由的坑 -->
@@ -31,6 +35,20 @@
 </template>
 
 <script>
+    export default {
+        methods: {
+            prevWeb() {
+                this.$router.go(-1);
+            }
+        },
+        computed: {
+            // 顶部的浏览器是否返回
+            isBack() {
+                // 如果路由地址不是 /home 就出现返回按钮
+                return this.$route.path != "/home";
+            }
+        }
+    };
 </script>
 
 <style lang="scss" scoped>
