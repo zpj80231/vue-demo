@@ -112,7 +112,26 @@
                 box-shadow: 0 0 8px #999;
             }
         }
+    }
+</style>
 
-
+<style lang="scss">
+    .photoinfo-container {
+        .suoluetu {
+            .my-gallery{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            figure {
+                width: 60px;
+                height: 80px;
+                margin: 10px;
+                box-shadow: 0 0 8px #999;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
     }
 </style>
