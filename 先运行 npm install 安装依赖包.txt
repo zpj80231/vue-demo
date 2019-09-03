@@ -1,4 +1,11 @@
-安装
+1.一般 'npm install' 就好了，但如果运行 'npm run dev' 发现控制台报错
+那么依此安装：
 npm i -g webpack
 npm i -D webpack-dev-server
+npm install sass sass-loader --save-dev
 npm install vue-resource --save
+
+2.如果还报错：
+npm rebuild node-sass
+
+3.改完之后运行 'npm run dev' 即可自动打开浏览器窗口，打开手机模式经行观看吧！
